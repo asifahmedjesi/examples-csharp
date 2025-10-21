@@ -34,14 +34,14 @@
 ##### Floating-Point Types
 
 | Data Type | CLR Name | Size (bits) | Precision | Range | Literal Suffix |
-|-----------|----------|-------------|--------|----------|----------------|
+|-----------|----------|-------------|-----------|-------|----------------|
 | float | System.Single | 32 | 23 bits (~7 decimal digits) | 1.5 × 10<sup>−45</sup> to 3.4 × 10<sup>38</sup> | F or f |
 | double | System.Double | 64 | 52 bits (~15 decimal digits) | 5.0 × 10<sup>−324</sup> to 1.8 × 10<sup>308</sup> | D or d |
 
-##### High Precision Floating Point Numbers
-| Data Type | CLR Name | Size (bits) | Range | Literal Suffix |
-|-----------|----------|-------------|-------|----------------|
-| decimal | System.Decimal | 128 | 1.0 × 10<sup>-28</sup> to approximately 7.9 × 10<sup>28</sup> | M or m |
+##### High Precision Floating Point Types
+| Data Type | CLR Name | Size (bits) | Precision | Range | Literal Suffix |
+|-----------|----------|-------------|-----------|-------|----------------|
+| decimal | System.Decimal | 128 | 28-29 digits of precision | 1.0 × 10<sup>-28</sup> to approximately 7.9 × 10<sup>28</sup> | M or m |
 
 ##### Character Type
 

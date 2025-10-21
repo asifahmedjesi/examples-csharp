@@ -17,6 +17,9 @@ internal class MyVariables
 
         example.VariablesUsingTypeInference();
         Console.WriteLine();
+
+        example.DefaultValues();
+        Console.WriteLine();
     }
 
     public void VariablesUsingExplicitType()
@@ -91,6 +94,47 @@ internal class MyVariables
 
         Console.WriteLine();
     }
+
+    public void DefaultValues()
+    {
+        Console.WriteLine("## Default Values:");
+        Console.WriteLine();
+
+        Console.WriteLine(default(int));
+        Console.WriteLine(default(uint));
+        Console.WriteLine(default(long));
+        Console.WriteLine(default(ulong));
+        Console.WriteLine(default(float));
+        Console.WriteLine(default(double));
+        Console.WriteLine(default(decimal));
+        Console.WriteLine(default(bool));
+        Console.WriteLine(default(char));
+
+        int i = default;
+        var intValue = default(int);
+        uint ui = default;
+        long l = default;
+        ulong ul = default;
+        float f = default;
+        double d = default;
+        decimal m = default;
+        bool b = default;
+        char c = default;
+
+        Console.WriteLine(i);
+        Console.WriteLine(intValue);
+        Console.WriteLine(ui);
+        Console.WriteLine(l);
+        Console.WriteLine(ul);
+        Console.WriteLine(f);
+        Console.WriteLine(d);
+        Console.WriteLine(m);
+        Console.WriteLine(b);
+        Console.WriteLine(c);
+
+        Console.WriteLine();
+    }
+
 }
 
 //myFloat = (float)myDecimal;   // explicit cast

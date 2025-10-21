@@ -40,9 +40,12 @@ internal class MyLiterals
         Console.WriteLine($"1.0M: TypeName {1.0M.GetType().Name}, TypeFullName {1.0M.GetType().FullName}, BaseTypeFullName {1.0M.GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {1.0M.GetType().BaseType?.BaseType?.FullName}");
         Console.WriteLine();
 
-        // Character literals
-        Console.WriteLine("Character Literals:");
+        // Character and string literals
+        Console.WriteLine("Character and String Literals:");
         Console.WriteLine($"'a': TypeName {'a'.GetType().Name}, TypeFullName {'a'.GetType().FullName}, BaseTypeFullName {'a'.GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {'a'.GetType().BaseType?.BaseType?.FullName}");
+        Console.WriteLine($"\"Hello C#!\": TypeName {"Hello C#!".GetType().Name}, TypeFullName {"Hello C#!".GetType().FullName}, BaseTypeFullName {"Hello C#!".GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {"Hello C#!".GetType().BaseType?.BaseType?.FullName ?? "NONE"}");
+        //Console.WriteLine($""" "Hello C#!": TypeName {"Hello C#!".GetType().Name}, TypeFullName {"Hello C#!".GetType().FullName}, BaseTypeFullName {"Hello C#!".GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {"Hello C#!".GetType().BaseType?.BaseType?.FullName ?? "NONE"}""");
+        //Console.WriteLine($$""" "Hello C#!": TypeName {{"Hello C#!".GetType().Name}}, TypeFullName {{"Hello C#!".GetType().FullName}}, BaseTypeFullName {{"Hello C#!".GetType().BaseType?.FullName}}, BaseTypeBaseTypeFullName {{"Hello C#!".GetType().BaseType?.BaseType?.FullName ?? "NONE"}}""");
         Console.WriteLine();
 
         // Boolean literals

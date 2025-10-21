@@ -6,3 +6,5 @@ Console.WriteLine();
 MyDataTypes.Run();
 MyLiterals.Run();
 MyVariables.Run();
+MyDataTypeConversions.Run();
+MyVariableScopes.Run();

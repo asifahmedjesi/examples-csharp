@@ -26,6 +26,8 @@ internal class MyOperators
         example.NullCoalescingAssignmentOperator();
         example.NullConditionalOperator();
         example.NullConditionalAndNullCoalescingOperators();
+        example.NameOfOperator();
+        example.TypeOfOperator();
     }
 
     public void OperatorPrecedence()
@@ -349,5 +351,27 @@ internal class MyOperators
         Console.WriteLine($"After Right Shift Assignment (z >>= 1): {z}"); // 2
 
         Console.WriteLine();
+    }
+
+    public void NameOfOperator()
+    {
+        int count = 123;
+        string name = nameof(count); // name is "count"
+        Console.WriteLine(name);
+
+        name = nameof(StringBuilder.Length);
+        Console.WriteLine(name);
+
+        name = nameof(StringBuilder) + "." + nameof(StringBuilder.Length);
+        Console.WriteLine(name);
+    }
+
+    public void TypeOfOperator()
+    {
+        Type t = typeof(int);     
+        Console.WriteLine(t.FullName); // System.Int32
+        
+        t = typeof(System.Collections.Generic.List<string>);
+        Console.WriteLine(t.FullName); // System.Collections.Generic.List`1[System.String]
     }
 }

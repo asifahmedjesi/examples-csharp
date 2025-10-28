@@ -44,14 +44,17 @@ internal class MyLiterals
         Console.WriteLine("Character and String Literals:");
         Console.WriteLine($"'a': TypeName {'a'.GetType().Name}, TypeFullName {'a'.GetType().FullName}, BaseTypeFullName {'a'.GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {'a'.GetType().BaseType?.BaseType?.FullName}");
         Console.WriteLine($"\"Hello C#!\": TypeName {"Hello C#!".GetType().Name}, TypeFullName {"Hello C#!".GetType().FullName}, BaseTypeFullName {"Hello C#!".GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {"Hello C#!".GetType().BaseType?.BaseType?.FullName ?? "NONE"}");
-        //Console.WriteLine($""" "Hello C#!": TypeName {"Hello C#!".GetType().Name}, TypeFullName {"Hello C#!".GetType().FullName}, BaseTypeFullName {"Hello C#!".GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {"Hello C#!".GetType().BaseType?.BaseType?.FullName ?? "NONE"}""");
-        //Console.WriteLine($$""" "Hello C#!": TypeName {{"Hello C#!".GetType().Name}}, TypeFullName {{"Hello C#!".GetType().FullName}}, BaseTypeFullName {{"Hello C#!".GetType().BaseType?.FullName}}, BaseTypeBaseTypeFullName {{"Hello C#!".GetType().BaseType?.BaseType?.FullName ?? "NONE"}}""");
         Console.WriteLine();
 
         // Boolean literals
         Console.WriteLine("Boolean Literals:");
         Console.WriteLine($"true: TypeName {true.GetType().Name}, TypeFullName {true.GetType().FullName}, BaseTypeFullName {true.GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {true.GetType().BaseType?.BaseType?.FullName}");
         Console.WriteLine($"false: TypeName {false.GetType().Name}, TypeFullName {false.GetType().FullName}, BaseTypeFullName {false.GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {false.GetType().BaseType?.BaseType?.FullName}");
+        Console.WriteLine();
+
+        // Tuple literal
+        Console.WriteLine("Tuple Literal:");
+        Console.WriteLine($"(1, \"Hello\"): TypeName {(1, "Hello").GetType().Name}, TypeFullName {(1, "Hello").GetType().FullName}, BaseTypeFullName {(1, "Hello").GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {(1, "Hello").GetType().BaseType?.BaseType?.FullName}");
         Console.WriteLine();
     }
 
@@ -111,6 +114,13 @@ internal class MyLiterals
         Console.WriteLine($"trueLiteral: {trueLiteral}, TypeName {trueLiteral.GetType().Name}, TypeFullName {trueLiteral.GetType().FullName}, BaseTypeFullName {trueLiteral.GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {trueLiteral.GetType().BaseType?.BaseType?.FullName}");
         Console.WriteLine($"falseLiteral: {falseLiteral}, TypeName {falseLiteral.GetType().Name}, TypeFullName {falseLiteral.GetType().FullName}, BaseTypeFullName {falseLiteral.GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {falseLiteral.GetType().BaseType?.BaseType?.FullName}");
         Console.WriteLine();
+
+        // Tuple literal
+        var tupleValue = (1, "Hello");
+
+        Console.WriteLine("Tuple Literal:");
+        Console.WriteLine($"tupleValue: {tupleValue}, TypeName {tupleValue.GetType().Name}, TypeFullName {tupleValue.GetType().FullName}, BaseTypeFullName {tupleValue.GetType().BaseType?.FullName}, BaseTypeBaseTypeFullName {tupleValue.GetType().BaseType?.BaseType?.FullName}");
+        Console.WriteLine();
     }
-    
+
 }

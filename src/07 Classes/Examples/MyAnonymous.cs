@@ -19,4 +19,29 @@ internal class MyAnonymous
         var v = new { first = 1, second = true };
         Console.WriteLine($"First: {v.first}, Second: {v.second}");
     }   
+
+    public void Example()
+    {
+        var person = new { Name = "John", Age = 30 };
+        Console.WriteLine($"Name: {person.Name}, Age: {person.Age}");
+
+        int Age = 23;
+        var dude = new { Name = "Bob", Age, Age.ToString().Length };
+
+        // Anonymous types are immutable
+        // person.Name = "Doe"; // This will cause a compile-time error
+
+        // Anonymous types can be used in LINQ queries
+        var people = new[]
+        {
+            new { Name = "Alice", Age = 25 },
+            new { Name = "Bob", Age = 35 }
+        };
+        foreach (var p in people)
+        {
+            Console.WriteLine($"Name: {p.Name}, Age: {p.Age}");
+        }
+
+        Console.WriteLine();
+    }
 }

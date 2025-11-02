@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Examples;
+﻿namespace Examples;
 
 internal class MyStructs
 {
@@ -27,10 +21,12 @@ public struct Point
     public static int myStatic = 5;     // allowed 
     public const int myConst = 10;      // allowed
 
+    public int m = 1, n = 1;            // allowed (C# 10)
+    public int z { get; set; } = 1;     // allowed (C# 10) 
+
     public Point(int x, int y)
     {
         this.x = x;
         this.y = y;
     }
 }
-

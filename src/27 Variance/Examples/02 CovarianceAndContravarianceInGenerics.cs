@@ -116,7 +116,7 @@ internal class CovarianceAndContravarianceInGenericsDemo
      */
     public void ExampleWithGenericInterfacesCovariant()
     {
-        List<Derived> dlist = new List<Derived>();
+        List<DerivedClass> dlist = new List<DerivedClass>();
         DerivedClass.PrintDerivedItems(dlist);
     }
 
@@ -190,9 +190,9 @@ internal class CovarianceAndContravarianceInGenericsDemo
 
 internal class BaseClass
 {
-    public static void PrintBases(IEnumerable<Base> bases)
+    public static void PrintBases(IEnumerable<BaseClass> bases)
     {
-        foreach (Base b in bases)
+        foreach (BaseClass b in bases)
         {
             Console.WriteLine(b);
         }
@@ -201,10 +201,10 @@ internal class BaseClass
 
 internal class DerivedClass : BaseClass
 {
-    public static void PrintDerivedItems(IEnumerable<Derived> derivedItems)
+    public static void PrintDerivedItems(IEnumerable<DerivedClass> derivedItems)
     {
         DerivedClass.PrintBases(derivedItems); // The covariant type parameter is the reason why an instance of IEnumerable<Derived> can be used instead of IEnumerable<Base>.
-        IEnumerable<Base> bIEnum = derivedItems;
+        IEnumerable<BaseClass> bIEnum = derivedItems;
     }
 }
 

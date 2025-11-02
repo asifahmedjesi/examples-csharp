@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Examples;
+
 internal class MyAbstracts
 {
 
@@ -14,14 +15,14 @@ public abstract class ShapeBase
 {
     public int x = 100, y = 100;
 
-    // Abstract method
-    public abstract int GetArea();
-
     // Abstract property
     public abstract int area { get; set; }
 
     // Abstract indexer
     public abstract int this[int index] { get; set; }
+
+    // Abstract method
+    public abstract int GetArea();
 
     // Abstract delegate
     public delegate void MyDelegate();

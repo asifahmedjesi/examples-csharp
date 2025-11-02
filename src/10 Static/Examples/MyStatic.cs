@@ -31,6 +31,9 @@ internal class MyStatic
     // Static/class variable (only one instance) 
     public static float pi = 3.14F;
 
+    // Static/class property (only one instance) 
+    public static int Total { get; set; } = 0;
+
     // Static/class method
     public static float ComputeArea(float a)
     {
